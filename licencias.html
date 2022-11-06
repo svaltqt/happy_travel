@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Happy travel website">
+    <meta name="robots" content="index,follow">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Happy Travel</title>
+  </head>
+
+
+  <body data-spy="scroll" data-target="#navbar" data-offset="57">
+    
+    
+    <!-- Header -->
+    <nav id="header" class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="assets/images/happy-logo.png" alt="htravel logo">
+          Turismo y aventura
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbar">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="./index.html">Inicio</a>
+            </li>            
+            <li class="nav-item">
+              <a class="nav-link" href="./descripcion.html">Descripción</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./licencias.html">Licencias</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./funcionalidades.html">Funcionalidades</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./beneficios.html">Beneficios</a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- /Header -->
+ 
+    <main>
+      <div class="container">
+        <div class="pricing-wrapper clearfix">
+            <div class="pricing-table">
+              <h3 class="pricing-title">Basico</h3>
+              <div class="price">145.000 COP/AÑO</div>
+              <!-- Lista de Caracteristicas / Propiedades -->
+              <ul class="table-list">
+                  <li>Este plan consiste en tener prioridad después de reservar. Es decir, al momento de reservar obtendrás mejores beneficios con respecto a los demás viajeros que reservaron sin estar afiliados a este plan, beneficios tales como: Viaje en primera clase, Mejores habitaciones disponibles según el hotel, ¡Y mucho más!</li>
+              </ul>
+            </div>
+
+            <div class="pricing-table">
+              <h3 class="pricing-title">Premium</h3>
+                <div class="price">205.000 COP/AÑO</div>
+                <!-- Lista de Caracteristicas / Propiedades -->
+                <ul class="table-list">
+                    <li>Este plan está pensado para los viajeros que tienen el viaje como un hobbie, por cada viaje realizado se tendrá en cuenta un descuento del 10 % para el próximo viaje, es acumulable, se podrá llegar a un máximo del 70 % de descuento en el último viaje que se realice después de haber hecho todos los anteriores, luego de este viaje el descuento del 70 % se mantendrá durante todos los siguientes viajes del año, al finalizar el año el plan se reinicia por lo que se vuelve a empezar con un descuento del 10 % para el próximo viaje.</li>
+                </ul>
+            </div>
+
+
+            <div class="pricing-table">
+              <h3 class="pricing-title">Ultimate</h3>
+              <div class="price">340.000 COP/AÑO</div>
+              <!-- Lista de Caracteristicas / Propiedades -->
+              <ul class="table-list">
+                  <li>¡Este plan es el definitivo para que tengas la mejor experiencia con nosotros! Reuniendo todos los beneficios de los planes basico y premium, es el mejor en relación calidad-precio, y quedarás más que satisfecho con cada experiencia que tengas con nuestra empresa.</li>
+              </ul>
+          </div>
+      </div>
+  </div>
+
+    <div class="container mt-5">
+        <form action="" name="precios">
+            <div class="row">
+                <div class="col">
+                    <div class="mb-3">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <label class="input-group-text" for="">Tipo de Licencia</label>
+                            </div>
+                            <select class="custom-select" name="licencia" required onchange="ValidarLicencia()">
+                            <option value="">Selecciona una...</option>
+                            <option value="1">Basico</option>
+                            <option value="2">Premium</option>
+                            <option value="3">Ultimate</option>
+                          </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="mb-3">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <label class="input-group-text" for="">Cantidad</label>
+                            </div>
+                            <div class="input-group-prepend">
+                                <input type="number" class="form-control" placeholder="Cantidad" name="cantidad" maxlength="2" onchange="ValidarLicencia()">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="mb-3">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <label class="input-group-text" for="">Total</label>
+                            </div>
+                            <div class="input-group-prepend col row">
+                                <label class="input-group-text col" for=""><span id="total"></span></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <div class="mb-3">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <label class="input-group-text" for="">Tipo de Pago</label>
+                            </div>
+                            <select class="custom-select" name="tarjeta" required onchange="ValidarPago()">>
+                            <option value="1">Tarjeta Debito</option>
+                            <option value="2">Tarjeta Credito</option>
+                          </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="display: none" id="credito" class="col">
+                    <div class="mb-3">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <label class="input-group-text" for="">N° Cuotas</label>
+                            </div>
+                            <div class="input-group-prepend">
+                                <input type="number" class="form-control" placeholder="cantidad" maxlength="2" name="cuotas" onchange="ValidarCuotas()">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="display: none" id="creditocuo" class="col">
+                    <div class="mb-3">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <label class="input-group-text" for="">Precio/Cuota</label>
+                            </div>
+                            <div class="input-group-prepend col row">
+                                <label class="input-group-text col" for=""><span id="cuotas"></span></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg btn-block" style="background-color: #1e5049;">SOLICITAR</button>
+            <br>
+        </form>
+    </div>
+    </main>
+
+    <br><br><br>
+
+    
+    
+
+    <!-- Footer -->
+    <footer id="footer" class="pb-4 pt-4">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-12 col-lg">
+            <a href="#">Preguntas frecuentes</a>
+          </div>
+          <div class="col-12 col-lg">
+            <a href="#">Contáctanos</a>
+          </div>  
+          <div class="col-12 col-lg">
+            <a href="#">Términos y condiciones</a>
+          </div>
+          <div class="col-12 col-lg">
+            <a href="#">Privacidad</a>
+          </div>
+      </div>
+    </footer>
+    <!-- /Footer -->
+
+   
+
+
+
+ 
+<!--Modal: Mapas-->
+
+<!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script src="js/scripts.js"></script>
+  </body>
+</html>
+
