@@ -1,6 +1,7 @@
 $(document).ready(function(){
 
     cont = 0;
+    // Metodo de la página registro
     function registro() {
 
         var usuario = $("#Rusuario").val();
@@ -35,6 +36,11 @@ $(document).ready(function(){
                 }
         
             }
+    // Fin Metodo de la página registro   
+
+
+
+
 }
    
    
@@ -47,6 +53,25 @@ $(document).ready(function(){
         let correo = sessionStorage.getItem('correo'+cont)
         alert(cont)
         alert(nombre+" "+correo)
+
+        
+    })
+
+    $("#loginUsuario").click(function(){        
+        
+        
+        let nombre = sessionStorage.getItem('usuario'+0)
+        let correo = sessionStorage.getItem('correo'+0)
+        let contraseña = sessionStorage.getItem('pass'+0)
+        alert(cont)
+        alert(nombre+" "+correo)
+
+        var leerUsuario = $("#Lusuario").val();        
+        var leerContraseña = $("#Lpass").val();
+        
+        if(nombre ==leerUsuario && contraseña ==leerContraseña ){
+            alert('Correcto')
+        }
 
         
     })
