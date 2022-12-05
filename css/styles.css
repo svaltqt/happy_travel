@@ -12,7 +12,7 @@
 }
 
 #header img {
-  width: 80px;
+  width: 70px;
 }
 /* CSS para modificar el tamado de la imagen del Main */
 #main .carousel-inner img {
@@ -49,15 +49,15 @@
   margin-right: 5px;
   font-family: sans-serif;
   -webkit-text-stroke: 0.2px #fff; 
-
 }
-
+/*  Controlar el hover de los botones dentro del carrusel*/
 #navbar-carrusel:hover {
   background-color: #3892ca; /* azul */
   color: white;
   cursor: pointer;
 }
 
+/* Controlar la Seccion de Hoteles*/
 #hoteles {
   background-color: #343a40;
   color: white;
@@ -65,25 +65,21 @@
 
 #hoteles img {
   max-width: 100%;
+  height: 100%;
 }
 
-#hoteles2 {
-  background-color: #ffffff;
-  color: rgb(0, 0, 0);
-}
-
-#hoteles2 img {
-  max-width: 100%;
-}
-
+/* SECCIOn ubicacion */
 #ubicacion {
-  background-color: #343a40;
-  color: white;
+  background-color: #fffffffd;
+  color: rgb(0, 0, 0);
 }
 
 #ubicacion img {
   max-width: 100%;
 }
+
+/* FIN SECCIOn ubicacion */
+/* FOOTER */
 #footer {
   background: linear-gradient(90deg,#1c3643,#273b47 25%,#1e5372);
 }
@@ -92,156 +88,6 @@
   color: white;
 }
 
-/* MAIN------------------------------*/
-.pricing-wrapper {
-  width: 960px;
-  margin: 40px auto 0;
-}
-
-.pricing-table {
-  margin: 0 10px;
-  text-align: center;
-  width: 300px;
-  float: left;
-  -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
-  -webkit-transition: all 0.25s ease;
-  -o-transition: all 0.25s ease;
-  transition: all 0.25s ease;
-}
-
-.pricing-table:hover {
-  -webkit-transform: scale(1.06);
-  -ms-transform: scale(1.06);
-  -o-transform: scale(1.06);
-  transform: scale(1.06);
-}
-
-.pricing-title {
-  color: #FFF;
-  background: #1e5049;
-  padding: 20px 0;
-  font-size: 2em;
-  text-transform: uppercase;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
-}
-
-.pricing-table.recommended .pricing-title {
-  background: #2db3cb;
-}
-
-.pricing-table.recommended .pricing-action {
-  background: #2db3cb;
-}
-
-.pricing-table .price {
-  background: #c6a992;
-  font-size: 3.4em;
-  font-weight: 700;
-  padding: 20px 0;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
-}
-
-.pricing-table .price sup {
-  font-size: 0.4em;
-  position: relative;
-  left: 5px;
-}
-
-.table-list {
-  background: #FFF;
-  color: #403d3a;
-}
-
-.table-list li {
-  font-size: 1.4em;
-  font-weight: 700;
-  padding: 12px 8px;
-}
-
-.table-list li span {
-  font-weight: 400;
-}
-
-.table-list li span.unlimited {
-  color: #FFF;
-  background: #1e5049;
-  font-size: 0.9em;
-  padding: 5px 7px;
-  display: inline-block;
-  -webkit-border-radius: 38px;
-  -moz-border-radius: 38px;
-  border-radius: 38px;
-}
-
-.table-list li span.limited {
-  color: black;
-  background: #f3dcbb;
-  font-size: 0.9em;
-  padding: 5px 7px;
-  display: inline-block;
-  -webkit-border-radius: 38px;
-  -moz-border-radius: 38px;
-  border-radius: 38px;
-}
-
-.table-list li:nth-child(2n) {
-  background: #F0F0F0;
-}
-
-.table-buy {
-  background: #FFF;
-  padding: 15px;
-  text-align: left;
-  overflow: hidden;
-}
-
-.table-buy p {
-  float: left;
-  color: #37353a;
-  font-weight: 700;
-  font-size: 2.4em;
-}
-
-.table-buy p sup {
-  font-size: 0.5em;
-  position: relative;
-  left: 5px;
-}
-
-.table-buy .pricing-action {
-  float: right;
-  color: #FFF;
-  background: #e95846;
-  padding: 10px 16px;
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-  border-radius: 2px;
-  font-weight: 700;
-  font-size: 1.4em;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
-  -webkit-transition: all 0.25s ease;
-  -o-transition: all 0.25s ease;
-  transition: all 0.25s ease;
-}
-
-.table-buy .pricing-action:hover {
-  background: #cf4f3e;
-}
-
-.recommended .table-buy .pricing-action:hover {
-  background: #228799;
-}
-
-.btn-group-lg>.btn, .btn-lg {
-  width: 100%;
-  font-size: 1.25rem;
-  border-radius: 0.3rem;
-}
-
-ol, ul {
-  padding-left: 0;
-}
 
 /*  LOGOS */
 
