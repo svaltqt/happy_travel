@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Happy travel website">
+    <meta name="robots" content="index,follow">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/settings.css">
+    <title>Happy Travel</title>
+  </head>
+
+
+  <body data-spy="scroll" data-target="#navbar" data-offset="57">
+    
+    
+    <!-- Header -->
+    <nav id="header" class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="./index.html">
+          <img src="assets/images/happy-logo.png" alt="htravel logo">
+          Turismo y aventura
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbar">
+          <ul class="navbar-nav ml-auto">
+                       
+            <li class="nav-item">
+              <a class="nav-link" href="./sobreNosotros.html">Promociones</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./sobreNosotros.html">Sobre nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./ayuda.html">Ayuda</a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="./login.html"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+              </svg></a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- /Header -->
+ 
+    <section class="vh-100">
+      <div class="container py-4 h-100">
+        <div class="row d-flex align-items-center justify-content-center h-100">
+          <div class="col-md-7 col-lg-5 col-xl-3 offset-xl-1">
+            <form>
+              <h4 class="encabezado">Cambiar usuario</h4>
+              <!-- usuario input -->
+              <div class="form-outline mb-4">
+                <input type="text" id="usuarioActual" class="form-control form-control-lg" placeholder="Usuario Actual"/>
+              </div>    
+              <!-- usuario nuevo input -->
+              <div class="form-outline mb-4">
+                <input type="text" id="usuarioNuevo" class="form-control form-control-lg" placeholder="Usuario Nuevo" />
+              </div>                      
+    
+              <!-- Submit button -->
+              <button type="button" id="cambiarUsuario" class="btn btn-primary btn-lg btn-block">Modificar Cuenta</button>
+              <p id="verificarCambioUsuario"></p>
+              
+              </form>
+          </div>
+
+
+          <div class="col-md-7 col-lg-5 col-xl-3 offset-xl-1">
+            <form>
+              <h4 class="encabezado">Cambiar Contraseña</h4>
+              <!-- Contraseña input -->
+              <div class="form-outline mb-4">
+                <input type="password" id="contraActual" class="form-control form-control-lg" placeholder="Contraseña Actual"/>
+              </div>    
+              <!-- nueva Contraseña input -->
+              <div class="form-outline mb-4">
+                <input type="password" id="contraNueva" class="form-control form-control-lg" placeholder="Contraseña Nueva" />
+              </div>             
+    
+              <!-- Submit button -->
+              
+              <button type="button" id="cambiarContra" class="btn btn-primary btn-lg btn-block">Modificar Contraseña</button>
+              <p id="verificarCambioContra"></p>
+              </form>
+              
+          </div>
+          
+          
+          <div class="col-md-7 col-lg-5 col-xl-3 offset-xl-1">
+            <form>
+              <h4 class="encabezado">Cambiar Correo</h4>
+              <!-- Correo input -->
+              <div class="form-outline mb-4">
+                <input type="email" id="correoActual" class="form-control form-control-lg" placeholder="Correo Actual"/>
+                
+              </div>    
+              <!-- Correo nuevo input -->
+              <div class="form-outline mb-4">
+                <input type="email" id="correoNuevo" class="form-control form-control-lg" placeholder="Correo Nuevo" />
+                
+              </div>             
+    
+              <!-- Submit button -->
+              <button type="button" id="cambiarCorreo" class="btn btn-primary btn-lg btn-block">Modificar Correo</button>
+              <p id="verificarCambioCorreo"></p>
+              </form>
+              
+          </div>
+          
+        </div>
+      </div>
+    </section>
+    
+  
+
+    <!-- Footer -->
+    <footer id="footer" class="pb-4 pt-4">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-12 col-lg">
+            <a href="#">Preguntas frecuentes</a>
+          </div>
+          <div class="col-12 col-lg">
+            <a href="./index.html#contacto">Contáctanos</a>
+          </div>  
+          <div class="col-12 col-lg">
+            <a href="#">Términos y condiciones</a>
+          </div>
+          <div class="col-12 col-lg">
+            <a href="#">Privacidad</a>
+          </div>
+      </div>
+
+      
+    </footer>
+    <!-- /Footer -->   
+
+
+<!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script src="js/scripts.js"></script>
+  </body>
+</html>
+

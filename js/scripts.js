@@ -39,6 +39,7 @@ $(document).ready(function(){
      
     }// Fin Metodo de la página registro  
    
+    // Funcion Login
     function login() {        
         var leerUsuario = $("#Lusuario").val();
         var leercontra = $("#Lpass").val();
@@ -59,7 +60,7 @@ $(document).ready(function(){
             }
             else{
                 if(leerUsuario==nombre && leercontra==contraseña ){
-                    $(location).attr('href','./index.html')
+                    $(location).attr('href','./settings.html')
 
                 }else{
                     $("#verificarPariedad").html("<center>"+"<p style='color:red;'>"+"Usuario no existe"+"</p>"+"<center>");
@@ -68,8 +69,9 @@ $(document).ready(function(){
             }
                 
         }
+    // Funcion Login
 
-        var nombre = sessionStorage.getItem("usuario");       
+              
          
         
         
@@ -84,6 +86,66 @@ $(document).ready(function(){
     $("#loginUsuario").click(function(){  
         
         login()  
+ 
+    })
+
+    $("#cambiarUsuario").click(function(){  
+        
+        var usuarioActual = $("#usuarioActual").val();
+        var usuarioNuevo = $("#usuarioNuevo").val();       
+        var usuarioSession = sessionStorage.getItem("usuario"); 
+        
+        if(usuarioActual!=usuarioSession){
+            $("#verificarCambioUsuario").html("<center>"+"<p style='color:red;'>"+"Usuario no existe"+"</p>"+"<center>");
+            $('input').val('');
+        }
+        else{
+            sessionStorage.setItem("usuario", usuarioNuevo);
+            $("#verificarCambioUsuario").html("<center>"+"<p style='color:green;'>"+"¡Usuario cambiado con éxito!"+"</p>"+"<center>");
+            $('input').val('');
+        }
+
+
+    })
+
+    $("#cambiarContra").click(function(){          
+        
+        var contraActual = $("#contraActual").val();
+        var contraNuevo = $("#contraNueva").val();       
+        var contraSession = sessionStorage.getItem("pass"); 
+        var tamañoPass = contraNuevo.length; 
+
+       if (tamañoPass < 8) {
+        $("#verificarCambioContra").html("<center>"+"<p style='color:green;'>"+"¡Contraseña muy corta!"+"</p>"+"<center>");
+        }else{
+            if(contraActual!=contraSession){
+                $("#verificarCambioContra").html("<center>"+"<p style='color:red;'>"+"contraseña no existe"+"</p>"+"<center>");
+                
+            }
+            else{
+                sessionStorage.setItem("pass", contraNuevo);
+                $("#verificarCambioContra").html("<center>"+"<p style='color:green;'>"+"¡Contraseña cambiada con éxito!"+"</p>"+"<center>");
+                
+            }
+        }
+ 
+    })
+
+    $("#cambiarCorreo").click(function(){  
+        var correoActual = $("#correoActual").val();
+        var correoNuevo = $("#correoNuevo").val();       
+        var correoSession = sessionStorage.getItem("correo"); 
+        
+        if(correoActual!=correoSession){
+            $("#verificarCambioCorreo").html("<center>"+"<p style='color:red;'>"+"Correo no válido"+"</p>"+"<center>");
+            
+        }
+        else{
+            sessionStorage.setItem("correo", correoNuevo);
+            $("#verificarCambioCorreo").html("<center>"+"<p style='color:green;'>"+"¡Correo cambiado con éxito!"+"</p>"+"<center>");
+            
+        }
+         
  
     })
 
