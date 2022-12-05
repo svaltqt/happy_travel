@@ -71,11 +71,25 @@ $(document).ready(function(){
         }
     // Funcion Login
 
-              
-         
-        
-        
+    // Like button  
     
+    var $likeButton = $('#meGusta');
+
+    function clickAlBoton(){
+
+        count++;
+
+            if(count === 1) {
+                $likeButton.html('1 Like')
+            }
+            else {
+            $likeButton.html(count + ' Likes');
+            }
+    }
+    clickAlBoton()
+        
+        
+    // final like button 
     }
    
     $("#registroUsuario").click(function(){
