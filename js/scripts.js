@@ -1,7 +1,8 @@
 $(document).ready(function(){
 
     cont = 0;
-    // Metodo de la página registro
+
+// Metodo de la página registro
     function registro() {
 
         var usuario = $("#Rusuario").val();
@@ -20,11 +21,10 @@ $(document).ready(function(){
         
             if (contraseña == contraseña2) {
                     
-                    sessionStorage.setItem("usuario"+cont, usuario)
-                    sessionStorage.setItem("pass"+cont, contraseña)
-                    sessionStorage.setItem("correo"+cont, correo)
-                    cont++;
-                                        
+                    sessionStorage.setItem("usuario", usuario);
+                    sessionStorage.setItem("pass", contraseña);
+                    sessionStorage.setItem("correo", correo);                
+                           
                 }
             else {                    
 
@@ -36,44 +36,55 @@ $(document).ready(function(){
                 }
         
             }
-    // Fin Metodo de la página registro   
-
-
-
-
-}
+     
+    }// Fin Metodo de la página registro  
    
-   
+    function login() {        
+        var leerUsuario = $("#Lusuario").val();
+        var leercontra = $("#Lpass").val();
+        var nombre = sessionStorage.getItem("usuario"); 
+        var contraseña = sessionStorage.getItem("pass");   
+        
+        if($("#Lusuario").val().length == 0){
+            var add = "<p>"                        
+                    add+="<p style='color:red;'>"+"Digite usuario"+"</p>"                       
+                    add+="</p>"
+        $("#verificarlogin").html(add);
+        }else{ 
+            if($("#Lpass").val().length == 0){
+                var add = "<p>"                        
+                    add+="<p style='color:red;'>"+"Digite contraseña"+"</p>"                       
+                    add+="</p>"
+            $("#verificarContra").html(add);
+            }
+            else{
+                if(leerUsuario==nombre && leercontra==contraseña ){
+                    $(location).attr('href','./index.html')
+
+                }else{
+                    $("#verificarPariedad").html("<center>"+"<p style='color:red;'>"+"Usuario no existe"+"</p>"+"<center>");
+                    
+                }
+            }
+                
+        }
+
+        var nombre = sessionStorage.getItem("usuario");       
+         
+        
+        
+    
+    }
    
     $("#registroUsuario").click(function(){
         
         registro()
-        
-        let nombre = sessionStorage.getItem('usuario'+cont)
-        let correo = sessionStorage.getItem('correo'+cont)
-        alert(cont)
-        alert(nombre+" "+correo)
-
-        
     })
 
-    $("#loginUsuario").click(function(){        
+    $("#loginUsuario").click(function(){  
         
-        
-        let nombre = sessionStorage.getItem('usuario'+0)
-        let correo = sessionStorage.getItem('correo'+0)
-        let contraseña = sessionStorage.getItem('pass'+0)
-        alert(cont)
-        alert(nombre+" "+correo)
-
-        var leerUsuario = $("#Lusuario").val();        
-        var leerContraseña = $("#Lpass").val();
-        
-        if(nombre ==leerUsuario && contraseña ==leerContraseña ){
-            alert('Correcto')
-        }
-
-        
+        login()  
+ 
     })
 
 
