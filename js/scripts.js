@@ -2,6 +2,9 @@ $(function () {
   $('[data-toggle="tooltip"]').tooltip()
 })
 
+
+
+
 // VALIDACION DE LICENCIAS 
 function ValidarLicencia() {
   var licencia = document.forms["precios"]["licencia"].value;
