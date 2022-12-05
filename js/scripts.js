@@ -1,6 +1,7 @@
 $(document).ready(function(){
 
-    function login() {
+    cont = 0;
+    function registro() {
 
         var usuario = $("#Rusuario").val();
         var correo = $("#Rcorreo").val(); 
@@ -17,7 +18,12 @@ $(document).ready(function(){
        else {
         
             if (contraseña == contraseña2) {
-                    return 1;                       
+                    
+                    sessionStorage.setItem("usuario"+cont, usuario)
+                    sessionStorage.setItem("pass"+cont, contraseña)
+                    sessionStorage.setItem("correo"+cont, correo)
+                    cont++;
+                                        
                 }
             else {                    
 
@@ -25,7 +31,7 @@ $(document).ready(function(){
                     add+="<center>"+"<p style='color:red;'>"+"Contraseña no coincide"+"</p>"+"</center>"                        
                     add+="</p>"
                     $("#Capturador").html(add);
-                    return -1;
+                    
                 }
         
             }
@@ -35,8 +41,12 @@ $(document).ready(function(){
    
     $("#registroUsuario").click(function(){
         
-        login()
-            
+        registro()
+        
+        let nombre = sessionStorage.getItem('usuario'+cont)
+        let correo = sessionStorage.getItem('correo'+cont)
+        alert(cont)
+        alert(nombre+" "+correo)
 
         
     })
